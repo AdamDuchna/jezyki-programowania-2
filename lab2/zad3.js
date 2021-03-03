@@ -1,6 +1,7 @@
 function unequal(a,b,c) {
-    ((a == b) and (a === b)) ? return false : ((a == c) and (a === c)) ? return false : ((b == c) and (b === c)) ? return false : return true ;
-
+    let isTrue
+    (a == b) && (a === b) ? isTrue='false' : (a == c) && (a === c) ? isTrue='false' : (b == c) && (b === c) ? isTrue='false' : isTrue='true' ;
+    return isTrue
 }
 
 console.log(unequal(1,1,3))
