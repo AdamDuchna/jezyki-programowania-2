@@ -103,4 +103,52 @@ const listaKg=listaZakupow.reduce((acc,currentValue) => {
 },[]);
 console.log(listaKg.sort())
 //pkt4
+function find(klucz){
+    const ofType=listaZakupow.reduce((acc,currentValue) => {
+        if(currentValue.typ == klucz && (currentValue.ilosc*currentValue.cena)<10 ){
+            return [...acc,currentValue]
+        }
+        else {
+            return acc
+        }
+    },[]);
+    return ofType.sort()
+}
+console.log(find('warzywa'))
+//pkt5
+const units=listaZakupow.reduce((acc,currentValue) => {
+    if(currentValue.jednostka == 'sztuk' ){
+        return [...acc,currentValue.produkt]
+    }
+    else {
+        return acc
+    }
+},[]);
+console.log(units)
+//pkt6
+const zestaw=listaZakupow.reduce((acc,currentValue,index) => {
+
+//??? 
+    
+},[]);
+
+//pkt7
+function szukaj(){
+const priciest=listaZakupow.reduce((acc,currentValue) => {
+    if(acc<currentValue.cena){
+        return currentValue.cena*currentValue.ilosc
+    }
+    else {
+        return acc
+    }
+    
+},0);
+const ceny=listaZakupow.reduce((acc,currentValue) => {
+    acc[currentValue.produkt]={'cena':currentValue.cena*currentValue.ilosc}
+    return acc
+},[]);
+console.log(priciest)
+console.log(ceny)
+}
+szukaj()
 
