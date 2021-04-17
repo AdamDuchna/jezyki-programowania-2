@@ -1,0 +1,19 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.13.14",
+    "@babel/core": "^7.13.15",
+    "@babel/node": "^7.13.13",
+    "@babel/preset-env": "^7.13.15",
+    "eslint": "^7.24.0",
+    "nodemon": "^2.0.7"
+  },
+  "scripts":{
+  "zad1": "nodemon --exec babel-node src/reduce.js",
+  "zad2": "nodemon --exec babel-node src/objects.js",
+  "zad3": "nodemon --exec babel-node src/creatingObjects.js"
+}
+}
