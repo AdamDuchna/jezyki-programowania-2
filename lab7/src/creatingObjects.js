@@ -92,7 +92,7 @@ const book0 = {
     }
     person3.print();
     
-    // 2.6. Co wydrukuje w konsoli powyĹźszy kod? Jaki scope ma arrow function? 
+    // 2.6. Co wydrukuje w konsoli powyĹźszy kod? zawartość obiektu person3 Jaki scope ma arrow function? na cały obiekt
     
     // 3. owrĂłÄmy do zadania 1. 
     // Dlaczego nasza funkcja BookCreator nie jest najlepszym rozwiÄzaniem do tworzenia obiektĂłw?
