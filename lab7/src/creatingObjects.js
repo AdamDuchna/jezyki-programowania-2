@@ -1,27 +1,26 @@
 //  1. Zdefiniuj pola 'title' i 'author' i funkcjÄ print(), ktĂłra wypisuje author - title
 
 const book0 = {
-    //properties
+    title:'Qld',
+    author:'Piotr',
+    print(){
+        console.log(this.title,this.author)
+    }
     };
     
     //book0.print();
     
-    const book = {};
-    //properties
-    
-    
-    
-    
-    //book.print();
-    
-    const book2 = Object.create({});
-    //properties
+    const book2 = Object.create(book0);
+    book2.title='Ald'
+    book2.name='Paweł'
     
     //book2.print();
     
     function BookCreator(title, author) {
-        const b = {};
-        //properties
+        const b = Object.create(book0)
+        b.title=title
+        b.author=author
+        return b
     
     }
     
@@ -47,8 +46,8 @@ const book0 = {
     //testThis2();
     
     
-    // 2.1. Czym jest this? | obiektem
-    // 2.2. Do czego odwoĹuje siÄ this | w obu przypadkach do niezdefiniowanych danych
+    // 2.1. Czym jest this? | this jest obiektem na którym wykonywana jest metoda
+    // 2.2. Do czego odwoĹuje siÄ this | do obiektu w którym jesteśmy
     
     const person = {
         name: 'Oscar Wilde',
@@ -56,7 +55,7 @@ const book0 = {
             console.log(this.name);
             
             function a() {
-                console.log(this);
+                console.log(a.name,':',person.name);
             }
             a();
         }
@@ -71,12 +70,13 @@ const book0 = {
     }
     
     const person1 = {
-        name: 'Aaron Towels', 
+        name: 'Aaron Towels',
     }
     
     const person2 = {
         name: 'Tom Clancy',
     }
+    person1.printName
 
     // 2.5. Za pomocÄ funkcji printName wypisz 'name' obu autorĂłw. Nie zmieniaj implementacji funkcji printName!
     
@@ -90,7 +90,7 @@ const book0 = {
             a();
         }
     }
-    person3.print();
+    //person3.print();
     
     // 2.6. Co wydrukuje w konsoli powyĹźszy kod? zawartość obiektu person3 Jaki scope ma arrow function? na cały obiekt
     

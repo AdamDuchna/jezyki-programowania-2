@@ -7,7 +7,7 @@ import About from './Components';
 
 ReactDOM.render(
   <React.StrictMode>
-    <About />
+    <About/>
   </React.StrictMode>,
   document.getElementById('root')
 );
