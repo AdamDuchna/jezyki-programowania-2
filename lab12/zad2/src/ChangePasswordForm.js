@@ -1,17 +1,21 @@
 import { useState } from "react"
 
-const ChangePasswordForm = (props) => {
-    const [password, onChange] = useState("")
-    const Change = (e) => {
-        return password + e
+const ChangePasswordForm = ({handleAction}) => {
+    const [typed,toType] = useState('')
+
+    const Change=(e)=>{
+
+        toType(e.target.value)
+    }
+    const Action=(e)=>{
+        e.preventDefault()
     }
 
     return (
-        <form >
+        <form onSubmit={Action}>
             <label>Hasło</label>
-            <input type="password" onChange={onChange(Change)} />
-            <button type="submit">Zatwierdź</button>
-            <h1>{password}</h1>
+            <input type="password" onChange={Change} />
+            <button onClick={()=>{handleAction(typed)}}>Zatwierdź</button>
         </form>
     )
 }

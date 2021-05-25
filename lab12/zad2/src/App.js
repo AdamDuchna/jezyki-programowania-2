@@ -2,8 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Welcome from './Welcome';
 import ChangePasswordForm from './ChangePasswordForm';
-import { render,useEffect} from 'react-dom';
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function List(props){
   return(
@@ -15,14 +14,21 @@ function List(props){
 
 
 
-
 function App() {
   const animals = ["Pies", "Kot", "Koń"]
-  const [haslo,SetHaslo] =useState('haslo')
-  const Zmien=(e)=>{
-    SetHaslo(e.target.value)
+  const [haslo,setHaslo] =useState('')
+
+  useEffect(() => {
+    alert("Korzystam z React Hooks")
+  },[]);
+
+  const handleClick=(e)=>{
+    setHaslo(e)
   }
+
+
   //zad3
+
   return (
     <div className="App">
       {
@@ -37,7 +43,6 @@ function App() {
 
         {// Poniżej są przygotowane inputy pod profil użytkownika. Stwórz komponent, który będzie otrzymywał te dane jako propsy, a następnie wyświetlał je.
         }
-        <form>
         <div>
           <label>Imię</label>
           <input type="text" />
@@ -50,7 +55,7 @@ function App() {
           <label>Wiek</label>
           <input type="text" />
         </div>
-        </form>
+
 
         {// Zmień powyższe rozwiązanie tak, aby użyć dekonstrukcji obiektów zamiast odwoływać się do zmiennych za pomocą props.[nazwa]
         }
@@ -59,7 +64,7 @@ function App() {
          // aby wpisane hasło wyświetlało się po zatwierdzeniu w tagu <p> istniejącym w App.js 
         }
 
-        <ChangePasswordForm DoChange={Zmien} />
+        <ChangePasswordForm handleAction={handleClick} />
         <p>{haslo}</p>
 
     </div>
