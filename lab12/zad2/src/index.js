@@ -3,12 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import AppButton from './zad1';
-
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppButton/>
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
