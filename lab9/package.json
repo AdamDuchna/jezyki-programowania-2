@@ -11,8 +11,11 @@
     "eslint": "^7.25.0",
     "nodemon": "^2.0.7"
   },
-  "scripts":{
+  "scripts": {
     "zad1": "nodemon --exec babel-node src/eventloop.js",
     "zad2": "nodemon --exec babel-node src/promises.js"
+  },
+  "dependencies": {
+    "axios": "^0.21.1"
   }
 }

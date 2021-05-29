@@ -8,6 +8,7 @@
     "nodemon": "^2.0.7"
   },
   "scripts":  {
-    "start": "nodemon src/index.js"
+    "start": "nodemon src/index.js",
+    "start2": "nodemon src/ShoppingList.js"
   }
 }

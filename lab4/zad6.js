@@ -1,12 +1,16 @@
-const lista=['Ola','Ala','Jaś']
 
+function serach(arg){
+const lista=['Ola','Ala','Jaś']
 const wynik=lista.reduce((acc,currentValue) => {
-    if( currentValue === 'Ala'){
+    if( currentValue === arg){
         return currentValue
     }
     else{
         return acc
     }
 
-  },'');
-  console.log(wynik);
+  },undefined);
+  return wynik
+}
+console.log(serach('Jaś'))
+  

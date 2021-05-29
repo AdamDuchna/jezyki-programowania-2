@@ -45,14 +45,16 @@ console.log(book2)
 // 3. Znasz już wiele sposób na stworzenie obiektu. Dlaczego więc nie użyć arrow function?
 // Uzupełnij poniższy kod o inicjalizację pola name i age. Dodaj wewnąrz funkcję addAge, która inkrementuje wiek. 
 
-const Person = name =>{
-    Person.name=name,
-    addAge(age){
-        Person.age=age 
+const Person = (name,age) =>{
+    this.name=name,
+   this.age=age,
+    function addAge(){
+        Person.age=age+1 
     }
 }
 
-
 // Przetestuj działanie tak stworzonego obiektu, korzystając z wiedzy, którą już masz. Jakie są róznice pomiędzy stworzeniem obiektu za pomocą poprzednich metod?
 // (przetestuj prototype, new itd.)
+// nie będzie działało jako prawidłowy obiekt ponieważ słowo this w arrow function ma szerszy scope
+
 

@@ -125,12 +125,14 @@ const units=listaZakupow.reduce((acc,currentValue) => {
     }
 },[]);
 console.log(units)
-//pkt6
-const zestaw=listaZakupow.reduce((acc,currentValue,index) => {
-
-//??? 
-    
+//pkt6 
+const zestaw=listaZakupow.reduce((acc,currentValue) => {
+if(acc[currentValue.typ] == undefined ){acc[currentValue.typ]=[]}
+acc[currentValue.typ].push(currentValue.produkt+' - '+currentValue.jednostka+":"+currentValue.ilosc)
+acc[currentValue.typ].sort()
+ return acc
 },[]);
+console.log(zestaw)
 
 //pkt7
 function szukaj(){
@@ -140,11 +142,10 @@ const priciest=listaZakupow.reduce((acc,currentValue) => {
     }
     else {
         return acc
-    }
-    
+    }  
 },0);
 const ceny=listaZakupow.reduce((acc,currentValue) => {
-    acc[currentValue.produkt]={'cena':currentValue.cena*currentValue.ilosc}
+    if(currentValue.cena*currentValue.ilosc<priciest){acc[currentValue.produkt]={'cena':currentValue.cena*currentValue.ilosc}}
     return acc
 },[]);
 console.log(priciest)

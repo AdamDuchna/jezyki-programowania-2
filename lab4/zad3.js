@@ -3,4 +3,4 @@ const score=array.reduce((previousValue,currentValue,index) => {
     console.log(index,':',currentValue)
     return currentValue
 
-},0);
+},{});

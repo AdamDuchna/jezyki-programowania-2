@@ -3,11 +3,15 @@
 const book0 = {
     title:'Qld',
     author:'Piotr',
+    readers: 3,
     print(){
         console.log(this.title,this.author)
+    },
+    addReaders(r){
+        this.readers=r
     }
+
     };
-    
     //book0.print();
     
     const book2 = Object.create(book0);
@@ -76,7 +80,10 @@ const book0 = {
     const person2 = {
         name: 'Tom Clancy',
     }
-    person1.printName
+person1.printName = printName
+person2.printName = printName
+person1.printName()
+person2.printName()
 
     // 2.5. Za pomocÄ funkcji printName wypisz 'name' obu autorĂłw. Nie zmieniaj implementacji funkcji printName!
     
@@ -92,7 +99,7 @@ const book0 = {
     }
     //person3.print();
     
-    // 2.6. Co wydrukuje w konsoli powyĹźszy kod? zawartość obiektu person3 Jaki scope ma arrow function? na cały obiekt
+    // 2.6. Co wydrukuje w konsoli powyĹźszy kod? zawartość obiektu person3 Jaki scope ma arrow function? rodzica print
     
     // 3. owrĂłÄmy do zadania 1. 
     // Dlaczego nasza funkcja BookCreator nie jest najlepszym rozwiÄzaniem do tworzenia obiektĂłw?
@@ -105,7 +112,9 @@ const book0 = {
     
     // 4. Na stworzonym obiekcie wywoĹaj funkcjÄ hasOwnProperty('isBestseller'). 
     // Napisz dlaczego nasz obiekt ma do niej dostÄp. (jeĹli wyskakuje bĹÄd - powrĂłÄ do poprzedniego zadania lub spytaj prowadzÄcego)
+    //book0.hasOwnProperty('isBestSeller')
+    //działa ponieważ jest wbudowana w każdy obiekt
     
     
     
-    // 5. OdwoĹaj siÄ do zmiennej __proto__ w stworzonym obiekcie, co zawiera ta zmienna i do czego sĹuĹźy?
+    // 5. OdwoĹaj siÄ do zmiennej __proto__ w stworzonym obiekcie, co zawiera ta zmienna i do czego sĹuĹźy? Pokazuje prototyp na podst ktorego powstał obiekt
