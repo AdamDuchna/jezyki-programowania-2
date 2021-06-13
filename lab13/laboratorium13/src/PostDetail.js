@@ -20,7 +20,6 @@ const PostDetail=(get)=>{
             <div className="tresc">{fetchedData.body}</div></div>
         setPost(toShow)
     },[]);
-    console.log(post)
 
 
     return(

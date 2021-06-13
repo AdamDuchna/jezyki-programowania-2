@@ -1,0 +1,23 @@
+.page-list-false {
+  margin-top: 20px;
+  padding-bottom: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  list-style: none;
+  .page-active {
+    border-bottom: 2px solid #00887a;
+  }
+}
+
+.page-list-false > li {
+  font-size: 18px;
+  padding: 6px;
+}
+
+@media (max-width: 1040px) {
+  .page-list-true {
+    display: none;
+  }
+}

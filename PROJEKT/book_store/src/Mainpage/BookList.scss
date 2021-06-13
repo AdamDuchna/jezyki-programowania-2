@@ -1,0 +1,64 @@
+.list-sort {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+
+  .list-sort-buttons,
+  .list-sort-res {
+    height: 40px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    border-bottom: #00887a 2px solid;
+    p {
+      margin-right: 10px;
+    }
+    select {
+      border: none;
+      height: 80%;
+    }
+  }
+}
+
+.list-books {
+  margin-left: 12px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-height: 83.6vh;
+  width: 70vw;
+  li {
+    list-style-type: none;
+  }
+}
+.book {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  padding-top: 12px;
+  padding-bottom: 16px;
+  width: 146px;
+
+  .book-name,
+  .book-author {
+    font-size: 82%;
+    text-align: start;
+    color: black;
+  }
+  .book-image {
+    justify-content: center;
+    width: 8em;
+    height: 12em;
+  }
+}
+@media (max-width: 1040px) {
+  .list-books {
+    width: 96vw;
+  }
+  .booklist-true {
+    display: none;
+  }
+  .checkbox {
+    width: 60px;
+  }
+}

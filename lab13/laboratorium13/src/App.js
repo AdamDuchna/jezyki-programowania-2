@@ -8,7 +8,6 @@ import FillForm from './FillForm'
 import useForm from './useForm'
 
 function App() {
-  const {handleChange,userData,handleSubmit,errors,formStatus,history} = useForm()
 
   return (
     <div className="App">

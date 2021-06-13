@@ -1,0 +1,86 @@
+.add-book {
+  padding-top: 20px;
+  background-color: #31364e;
+  padding-bottom: 20vh;
+  color: white;
+  text-align: end;
+  h1 {
+    text-align: center;
+    font-size: 200%;
+  }
+  .form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    p {
+      text-align: end;
+      font-size: 12px;
+      height: inherit;
+      color: red;
+    }
+    div {
+      display: flex;
+      padding: 8px;
+      justify-content: space-between;
+    }
+    .form-label {
+      justify-self: start;
+      padding: 8px;
+      font-size: 100%;
+      border-left: 2px #00887a solid;
+    }
+    .form-input {
+      border: none;
+      width: 300px;
+      border-radius: 4px;
+      font-size: 100%;
+      outline: none;
+    }
+    .book-description {
+      flex-direction: column;
+      border: none;
+      justify-content: center;
+
+      .form-input {
+        margin-top: 18px;
+        width: 360px;
+        height: 20vh;
+        align-self: center;
+        resize: none;
+        outline: none;
+      }
+    }
+
+    .form-submit {
+      margin-top: 12px;
+      width: 30%;
+      height: 6vh;
+      background-color: #00887a;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      color: white;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .form {
+    .form-label {
+      text-align: start;
+      margin-bottom: 20px;
+    }
+    .form-input {
+      height: 6vh;
+      width: 100%;
+    }
+    div {
+      width: 300px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      padding: 8px;
+    }
+  }
+}

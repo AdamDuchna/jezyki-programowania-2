@@ -1,0 +1,119 @@
+.filter-field-false {
+  background-color: #31364e;
+  min-height: 90.8vh;
+  flex-direction: column;
+  max-width: 28vw;
+  justify-content: flex-start;
+  color: white;
+  height: inherit;
+  text-align: center;
+  position: sticky;
+  .filter-field-box {
+    width: 90%;
+    display: flex;
+    align-items: center;
+  }
+  .starfilter {
+    padding-left: 20px;
+    width: 50%;
+  }
+  .select-filters {
+    border-bottom: 4px #00887a solid;
+    width: 40%;
+  }
+  .checkbox {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    input {
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+      min-height: 20px;
+    }
+    .genre {
+      max-width: 100%;
+      text-align: left;
+      width: 50%;
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  input {
+    width: 70%;
+    padding-left: 20px;
+    margin: 20px;
+    height: 4vh;
+    border: 4px #00887a solid;
+    border-radius: 6px;
+    outline: none;
+  }
+  .star {
+    height: 30px;
+    width: 30px;
+  }
+}
+
+@media (max-width: 1040px) {
+  .filter-field-false {
+    display: none;
+  }
+  .filter-field-true {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100vw;
+    background-color: #31364e;
+    color: white;
+    height: inherit;
+    text-align: center;
+    .filter-field-box {
+      display: flex;
+      align-items: center;
+    }
+    .starfilter {
+      padding-left: 20px;
+      width: 340px;
+    }
+    .select-filters {
+      border-bottom: 4px #00887a solid;
+      width: 300px;
+      font-size: 26px;
+    }
+    .star {
+      height: 60px;
+      width: 60px;
+    }
+    input {
+      width: 50vw;
+      height: 50px;
+      padding-left: 20px;
+      margin: 20px;
+      border: 4px #00887a solid;
+      border-radius: 6px;
+      outline: none;
+    }
+    .checkbox {
+      width: 90%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      input {
+        width: 30px;
+        height: 30px;
+        min-width: 20px;
+        min-height: 20px;
+      }
+      .genre {
+        font-size: 20px;
+        max-width: 100%;
+        text-align: left;
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+      }
+    }
+  }
+}

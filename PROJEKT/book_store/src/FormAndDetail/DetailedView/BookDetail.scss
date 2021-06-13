@@ -1,0 +1,57 @@
+.detail {
+  display: flex;
+  padding: 40px;
+  padding-bottom: 270px;
+  background-color: #31364e;
+  .detail-data {
+    margin: 20px;
+    width: 40vw;
+    color: white;
+    font-size: 24px;
+  }
+  .detail-stars {
+    .star {
+      height: 2.5em;
+      width: 2.5em;
+    }
+  }
+  .detail-frame {
+    background-color: #1c1e2a;
+    height: 540px;
+    width: 330px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+  .detail-image {
+    height: 490px;
+    width: 330px;
+  }
+  .detail-description {
+    margin-top: 20px;
+    font-weight: lighter;
+    font-size: 20px;
+  }
+  .editOrDeleteField {
+    display: flex;
+    height: 40px;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: space-around;
+    .edit {
+      color: #00887a;
+    }
+    .delete {
+      color: red;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .detail {
+    flex-direction: column;
+    .detail-data {
+      margin: 5px;
+      width: 70vw;
+    }
+  }
+}
